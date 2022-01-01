@@ -3,6 +3,8 @@ window.addEventListener("DOMContentLoaded", () => {
     let error = document.querySelector(".errorName");
     let emailElement = document.getElementById("email");
     let errorEmail = document.querySelector(".errorEmail");
+    let phone = document.getElementById("phone");
+    let errorPhone = document.querySelector(".errorPhone");
     
     nameElement.addEventListener("input", () => {
             if(nameElement.value.length == 0) {
@@ -29,6 +31,20 @@ window.addEventListener("DOMContentLoaded", () => {
                 errorEmail.textContent = "";
             } catch (ee) {
                 errorEmail.textContent = "Invalid Email id";
+            }
+        }
+    });    
+    phone.addEventListener("input", () => {
+            if(phone.value.length == 0) {
+                errorPhone.textContent = "Please enter a value";
+                return;
+            }
+            else{
+                try {
+                (new Employee()).phone = phone.value;
+                errorPhone.textContent = "";
+            } catch (ee) {
+                errorPhone.textContent = "Invalid phone number";
             }
         }
     });    

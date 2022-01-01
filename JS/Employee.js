@@ -38,6 +38,21 @@ class Employee {
         }
     }
 
+    get phone() {
+        return this.phoneValue;
+    }
+
+    set phone(phone) {
+        let phonePattern = RegExp("^[0-9]{1,3}[\\s][0-9]{10}$");
+
+        if (!phonePattern.test(phone)) {
+            throw "Invalid Phone pattern";
+        }
+        else {
+            this.phoneValue = phone;
+        }
+    }
+
     get profilePic() { return this.profilePic; }
     set profilePic(profilePic) { this.profilePic = profilePic }
 
