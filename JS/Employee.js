@@ -53,6 +53,22 @@ class Employee {
         }
     }
 
+    get password() {
+        return this.pwdValue;
+    }
+
+    set password(password) {
+        let pwdPattern = RegExp("^.{8,}$");
+
+        if( !pwdPattern.test(password)) {
+            throw "Invalid password"
+        }
+        else {
+            this.pwdValue = password;
+        }
+
+    }
+
     get profilePic() { return this.profilePic; }
     set profilePic(profilePic) { this.profilePic = profilePic }
 
