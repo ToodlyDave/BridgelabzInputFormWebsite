@@ -1,0 +1,18 @@
+body {
+    margin: 0%;
+}
+
+.form-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-item {
+    margin-bottom: 2vh;
+}
+
+error-thing {
+    color: red;
+}
