@@ -58,7 +58,7 @@ class Employee {
     }
 
     set password(password) {
-        let pwdPattern = RegExp("^.{8,}$");
+        let pwdPattern = RegExp("^(?=.*[A-Z])(?=.*[0-9])(?=[^_\\W]*[_\\W][^_\\W]*$).{8,}$");
 
         if( !pwdPattern.test(password)) {
             throw "Invalid password"
