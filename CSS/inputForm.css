@@ -1,11 +1,29 @@
 body {
     margin: 0%;
+    font-family: sans-serif;
+}
+
+.parent-container {
+    height: 100vh;
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    width: 100vw;
+    background-color: tomato;
+    margin-bottom: 10vh;
+    font-size: 4em;
+    font-weight: 600;
 }
 
 .form-container {
     height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    /* justify-content: center; */
     align-items: center;
 }
 
@@ -13,6 +31,48 @@ body {
     margin-bottom: 2vh;
 }
 
+.salary {
+    display: flex; 
+    align-items: flex-end;
+}
+
+.entry-label {
+    display: inline-block;
+    width: 20vw;
+    text-align: end;
+}
+
+input {
+    width: 20vw;
+}
+
+#search {
+    width: 20.8vw;
+}
+
+#date {
+    width: 20.3vw;
+}
+
+#salary {
+    width: 21vw;
+    margin: 0%;
+    margin-left: 4px;
+}
+
+#salary-value {
+    text-align: left;
+    margin-left: 4px;
+}
+
 error-thing {
+    font-style: italic;
+    display: inline-block;
+    width: 20vw;
+    height: auto;
     color: red;
+}
+
+.submit-container {
+    margin-left: 21vw;
 }

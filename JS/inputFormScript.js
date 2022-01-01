@@ -10,6 +10,10 @@ window.addEventListener("DOMContentLoaded", () => {
 
     let pwd = document.getElementById("password");
     let errorPwd = document.querySelector(".errorPwd");
+
+    let salary = document.getElementById("salary");
+    let salaryValue = document.getElementById("salary-value");
+
     
     nameElement.addEventListener("input", () => {
             if(nameElement.value.length == 0) {
@@ -66,7 +70,10 @@ window.addEventListener("DOMContentLoaded", () => {
                 errorPwd.textContent = "Invalid password";
             }
         }
-    });    
+    }); 
+    salary.addEventListener("input", () => {
+        salaryValue.textContent = salary.value;
+    })   
 });
 
 function submitEmployee() {

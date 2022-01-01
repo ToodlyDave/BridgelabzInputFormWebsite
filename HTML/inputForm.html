@@ -9,27 +9,62 @@
     
 </head>
 <body>
+
     <div class="form-container">
-        <form class="input-form" onsubmit="validate(); return false;">
+        <div class="heading">
+            HTML 5 Form Input Fields
+        </div>
+        <form class="input-form" onsubmit="return false;">
             <div class="form-item">
-                Name: <input type="text" id="name">
+                <span class="entry-label">Name: </span>
+                <input type="text" id="name">
                 <error-thing class="errorName"></error-thing>
             </div>
             <div class="form-item">
-                Email: <input type="email" id="email">
+                <span class="entry-label">Password: </span>
+                <input type="password" id="password">
+                <error-thing class="errorPwd"></error-thing>
+            </div>
+            <div class="form-item">
+                <span class="entry-label">Email: </span>
+                <input type="email" id="email">
                 <error-thing class="errorEmail"></error-thing>
             </div>
             <div class="form-item">
-                Phone: <input type="tel" id="phone">
+                <span class="entry-label">Url: </span>
+                <input type="url" id="url">
+                <error-thing class="errorUrl"></error-thing>
+            </div>
+            <div class="form-item">
+                <span class="entry-label">Number: </span>
+                <input type="number" id="number">
+                <error-thing class="errorNumber"></error-thing>
+            </div>
+            <div class="form-item">
+                <span class="entry-label">Phone: </span>
+                <input type="tel" id="phone">
                 <error-thing class="errorPhone"></error-thing>
             </div>
             <div class="form-item">
-                Password: <input type="password" id="password">
-                <error-thing class="errorPwd"></error-thing>
+                <span class="entry-label">Search: </span>
+                <input type="search" id="search">
+                <error-thing class="errorSearch"></error-thing>
             </div>
-            <input type="submit" />
+            <div class="form-item">
+                <span class="entry-label">Date: </span>
+                <input type="datetime-local" id="date" value="2022-01-01T00:00">
+                <error-thing class="errorDate"></error-thing>
+            </div>
+            <div class="form-item salary">
+                <span class="entry-label">Salary: </span>
+                <input type="range" id="salary" min="1000" max="1000000">
+                <span class="entry-label" id="salary-value">500000</span>
+            </div>
+            <div class="submit-container">
+                <input type="submit" />
+            </div>
         </form>
     </div>
-    
-</body>
-</html>
+        
+    </body>
+    </html>
