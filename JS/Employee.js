@@ -23,6 +23,21 @@ class Employee {
         }
     }
 
+    get email() {
+        return this.emailValue;
+    }
+
+    set email (email) {
+        let emailPattern = RegExp("^[\\w+-]+(\\.[\\w-]+)*@[^_\\W]+(\\.[^_\\W]+)?(?=(\\.[^_\\W]{3,}$|\\.[a-zA-Z]{2}$)).*$")
+
+        if( !emailPattern.test(email)) {
+            throw "Invalid Email";
+        }
+        else {
+            this.emailValue = email;
+        }
+    }
+
     get profilePic() { return this.profilePic; }
     set profilePic(profilePic) { this.profilePic = profilePic }
 
